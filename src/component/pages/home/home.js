@@ -31,7 +31,9 @@ function Home() {
           </Link>
 
           <p>|</p>
-          <p className=" cursor-pointer">Sign up</p>
+          <Link to={"Signup"}>
+            <p className=" cursor-pointer">Sign up</p>
+          </Link>
         </div>
       </div>
       <Form></Form>

@@ -5,7 +5,9 @@ function Form() {
   return (
     <div className="flex items-center gap-[-10px] mt-6 font-[Raleway]">
       <div className="h-[400px] w-[400px] bg-[white] relative z-20 mr-[-40px] rounded-md p-[20px]">
-        <h1 className="text-[25px] font-medium">Find hotel and rooms in USA</h1>
+        <h1 className="text-[25px] font-medium">
+          Find hotel and rooms in India
+        </h1>
         <p>Our Room can be a best place art studio.</p>
         {/* HERE IS OUR FORM */}
         <Mainform></Mainform>

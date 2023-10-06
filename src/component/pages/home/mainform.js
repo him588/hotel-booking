@@ -7,7 +7,7 @@ function Mainform() {
       <input
         type="text"
         className="h-[45px] w-full  border-[1.3px] border-solid border-[grey] outline-none rounded-md text-[22px] px-2 "
-        placeholder="Anywhere in USA"
+        placeholder="Anywhere in India"
       />
       <div className="flex w-full h-[60px] items-center justify-between mt-4 border-[1px] border-solid border-[grey] px-1 rounded-lg ">
         <div>
@@ -31,6 +31,9 @@ function Mainform() {
           <Dropdown></Dropdown>
         </div>
       </div>
+      <button className="h-[50px] w-full bg-[#F33F3A] py-[10px] mt-3 rounded-lg text-[white] font-medium text-[20px]">
+        Submit
+      </button>
     </div>
   );
 }
