@@ -4,17 +4,17 @@ import { Facicon, Tick } from "../../icon";
 import Form from "./form";
 function Signup() {
   return (
-    <div className="flex items-center justify-between h-[120vh] w-full bg-[#f9f9ff] px-[30px] py-[20px] font-[Raleway] max-[900px]:px-[20px] max-[900px]:gap-[20px] max-[500px]:flex-col max-[500px]:h-[170vh] max-[500px]:px-[10px] max-[500px]:py-[10px] ">
+    <div className="flex items-center justify-between h-[120vh] w-full bg-[#f9f9ff] px-[30px] py-[20px] font-[Raleway] max-[400px]:flex-col max-[400px]:px-[15px] ">
       <img
         src={logo}
         alt=""
-        className="h-[100px] w-[100px] absolute top-4 left-4"
+        className="h-[100px] w-[100px] absolute z-50 top-4 left-4"
       />
 
-      <div className="w-[50%]  backdrop-filter backdrop-blur-sm bg-opacity-70 bg-clip-padding bg-[#f9f9ff] relative z-50 p-[30px]  max-[900px]:p-[0px] max-[900px]:mt-[0px] max-[500px]:w-[95%] max-[500px]:mt-[100px] max-[500px]:mb-[0px] max-[500px]:p-[30px] max-[500px]:rounded-xl">
+      <div className="w-[50%]  backdrop-filter backdrop-blur-sm bg-opacity-70 bg-clip-padding rounded-md bg-[#f9f9ff] relative z-40 p-[30px] max-[400px]:mt-[90px] max-[400px]:w-[95%] max-[400px]:p-[15px]">
         <Form></Form>
       </div>
-      <div className="w-[50%] h-full relative max-[500px]:h-[500px] max-[500px]:w-[100%] max-[500px]:mt-[-150px]">
+      <div className="w-[50%] h-full relative max-[400px]:w-[100%] max-[400px]:mt-[-100px] ">
         <img
           src="https://images.unsplash.com/photo-1569335468885-d7d1a41e570c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njh8fGhvdGVsfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60"
           alt=""

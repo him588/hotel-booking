@@ -6,9 +6,12 @@ import Searchbar from "./searchbar";
 function Header() {
   const [show, setshow] = useState(false);
   const weight = window.innerWidth;
-  console.log(weight);
+
   return (
-    <div className="py-[10px] flex items-center justify-between bg-[#f9f9ff] font-[Raleway] relative max-[400px]:px-[10px]">
+    <div
+      onClick={() => setshow(true)}
+      className="py-[10px] px-[20px] flex items-center justify-between bg-[#f9f9ff] font-[Raleway] relative max-[400px]:px-[10px]"
+    >
       <img
         src={img}
         alt=""
@@ -17,8 +20,11 @@ function Header() {
 
       {show ? (
         <p
-          className="font-semibold underline underline-offset-8 text-[20px] cursor-pointer max-[400px]:hidden max-[400px]:hidden"
-          onClick={() => setshow(false)}
+          className="font-semibold underline underline-offset-8 text-[20px] cursor-pointer max-[400px]:hidden "
+          onClick={(e) => {
+            e.stopPropagation();
+            setshow(false);
+          }}
         >
           Stay
         </p>

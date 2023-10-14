@@ -1,16 +1,8 @@
 import React from "react";
 import logo from "../../images/latest.png";
 import Form from "./form";
-import {
-  Amenicon,
-  Calicon,
-  Copyicon,
-  Faceicon,
-  Instaicon,
-  Twiticon,
-  Veriicon,
-} from "../../icon";
-import { Feature } from "../../core";
+import { Amenicon, Calicon, Veriicon } from "../../icon";
+import { Feature, Fotter } from "../../core";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -21,9 +13,13 @@ function Home() {
   const msg3 =
     "Stays with flexible cancellation make it easy to rebook if your plans change.";
   return (
-    <div className="p-[40px] font-[Raleway] bg-[#f9f9ff]">
+    <div className="p-[40px] font-[Raleway] bg-[#f9f9ff] max-[400px]:p-[10px]">
       <div className="flex items-center justify-between">
-        <img src={logo} alt="" className="h-[150px] w-[150px]" />
+        <img
+          src={logo}
+          alt=""
+          className="h-[150px] w-[150px] max-[400px]:w-[100px] max-[400px]:h-[100px]"
+        />
         <div className="flex gap-1 mt-[-15px] text-[18px]">
           <Link to={"login"}>
             {" "}
@@ -37,22 +33,22 @@ function Home() {
         </div>
       </div>
       <Form></Form>
-      <div className="flex mt-[80px] justify-between">
-        <div className="w-[30%]">
+      <div className="flex mt-[80px] justify-between max-[400px]:flex-col">
+        <div className="w-[30%] max-[400px]:w-[100%]">
           <Feature
             icon={<Veriicon h={30} w={30}></Veriicon>}
             heading={"Book with confidence"}
             msg={msg1}
           ></Feature>
         </div>
-        <div className="w-[30%] mt-[60px]">
+        <div className="w-[30%] max-[400px]:w-[100%] mt-[60px] max-[400px]:mt-[40px]">
           <Feature
-            icon={<Amenicon h={45} w={45}></Amenicon>}
+            icon={<Amenicon h={35} w={35}></Amenicon>}
             heading={"Find more amenities"}
             msg={msg2}
           ></Feature>
         </div>
-        <div className=" w-[30%] mt-[130px]">
+        <div className=" w-[30%] mt-[130px] max-[400px]:w-[100%]  max-[400px]:mt-[40px]">
           <Feature
             icon={<Calicon h={30} w={30}></Calicon>}
             heading={"Keep it flexible"}
@@ -61,19 +57,7 @@ function Home() {
         </div>
       </div>
       <div className="w-[100%] h-[.5px] bg-[grey] mt-[60px]"></div>
-      <div className="w-full flex justify-between mt-[30px]">
-        <div className="flex items-center text-[#bdbdbd]">
-          <Copyicon h={25} w={25}></Copyicon>
-          2023 Hostela, Inc
-        </div>
-        <div className="flex gap-3">
-          <Faceicon h={30} w={30}></Faceicon>
-          <Twiticon h={30} w={30}></Twiticon>
-          <div className="mt-[-3.5px] ml-[-5px]">
-            <Instaicon h={38} w={38}></Instaicon>
-          </div>
-        </div>
-      </div>
+      <Fotter></Fotter>
     </div>
   );
 }

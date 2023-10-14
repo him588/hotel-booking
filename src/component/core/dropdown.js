@@ -13,7 +13,7 @@ function Dropdown() {
   }
   return (
     <div
-      className="flex items-center relative gap-[15px] "
+      className="flex items-center relative gap-[15px]  "
       onClick={handleclick}
     >
       <p className="cursor-pointer text-[18px] font-normal">0</p>

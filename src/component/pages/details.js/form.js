@@ -3,8 +3,11 @@ import React from "react";
 function Form({ price }) {
   return (
     <div className="w-full h-auto font-[Raleway]  ">
-      <p>
-        <span>${price}</span>/night
+      <p className=" text-[23px] font-normal">
+        <span className="font-[Raleway] text-[25px] font-semibold">
+          ${price}
+        </span>
+        /night
       </p>
       <div className="flex w-full h-[60px] items-center justify-between mt-4 border-[1px] border-solid border-[grey] px-1 rounded-lg ">
         <div>

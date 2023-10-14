@@ -4,4 +4,5 @@ import Signup from "./signup/sighup";
 import Listing from "./listingpage/listing";
 import Fillter from "./fillter.js/hotel";
 import Deatils from "./details.js/details";
-export { Home, Login, Signup, Listing, Fillter, Deatils };
+import Success from "./success/success";
+export { Home, Login, Signup, Listing, Fillter, Deatils, Success };

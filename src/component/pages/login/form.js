@@ -22,7 +22,8 @@ function Form() {
       if (email === user[index].email && password === user[index].password) {
         localStorage.setItem("loginstatus", true);
         seterror2(false);
-        navigate("/booking");
+        localStorage.setItem("currentuser", email);
+        navigate("/hotels");
       } else {
         seterror2(true);
       }
@@ -67,6 +68,15 @@ function Form() {
       >
         Login
       </button>
+      <p className="text-[16px] font-medium mt-[10px] max-[400px]:text-center">
+        Didn't have any account go to{" "}
+        <span
+          className="text-[#b22c2c] text-[18px] cursor-pointer underline-offset-3 underline"
+          onClick={() => navigate("/signup")}
+        >
+          Signup.
+        </span>
+      </p>
     </div>
   );
 }

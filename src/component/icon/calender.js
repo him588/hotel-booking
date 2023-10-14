@@ -2,11 +2,11 @@ import React from "react";
 function Calicon({ h, w }) {
   return (
     <svg
+      fill=""
       width={w}
       height={h}
-      viewBox="-5.4 0 98.4 98.4"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      fill="#000000"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
@@ -15,59 +15,7 @@ function Calicon({ h, w }) {
         strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
-        {" "}
-        <g id="Group_4" transform="translate(-822.7 -241.5)">
-          {" "}
-          <path
-            id="Path_52"
-            d="M899.4,254.3H833.6a8.92,8.92,0,0,0-8.9,8.9V329a8.92,8.92,0,0,0,8.9,8.9h65.8a8.92,8.92,0,0,0,8.9-8.9V263.2A8.92,8.92,0,0,0,899.4,254.3Z"
-            fill="none"
-            stroke="#000"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            strokeWidth="4"
-          ></path>{" "}
-          <line
-            id="Line_25"
-            x2="21.2"
-            transform="translate(842.6 283.7)"
-            fill="none"
-            stroke="#000"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            strokeWidth="4"
-          ></line>{" "}
-          <line
-            id="Line_26"
-            x2="45.9"
-            transform="translate(842.6 302)"
-            fill="none"
-            stroke="#000"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            strokeWidth="4"
-          ></line>{" "}
-          <line
-            id="Line_27"
-            y2="19.6"
-            transform="translate(853.6 243.5)"
-            fill="none"
-            stroke="#000"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            strokeWidth="4"
-          ></line>{" "}
-          <line
-            id="Line_28"
-            y2="19.6"
-            transform="translate(879.4 243.5)"
-            fill="none"
-            stroke="#000"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            strokeWidth="4"
-          ></line>{" "}
-        </g>{" "}
+        <path d="M19,4H17V3a1,1,0,0,0-2,0V4H9V3A1,1,0,0,0,7,3V4H5A3,3,0,0,0,2,7V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4Zm1,15a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V12H20Zm0-9H4V7A1,1,0,0,1,5,6H7V7A1,1,0,0,0,9,7V6h6V7a1,1,0,0,0,2,0V6h2a1,1,0,0,1,1,1Z"></path>
       </g>
     </svg>
   );

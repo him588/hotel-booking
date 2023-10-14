@@ -6,6 +6,17 @@ import Header from "./header";
 import Card from "./card";
 import Slider from "./imageslider";
 import Searchbar from "./searchbar";
-import Filter from "./filter";
+import Filter from "../pages/fillter.js/filter";
+import Fotter from "./Footer";
 
-export { Dropdown, Feature, Input, Header, Card, Slider, Searchbar, Filter };
+export {
+  Dropdown,
+  Feature,
+  Input,
+  Header,
+  Card,
+  Slider,
+  Searchbar,
+  Filter,
+  Fotter,
+};

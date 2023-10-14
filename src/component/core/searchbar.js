@@ -8,13 +8,14 @@ function Searchbar({ show, setshow }) {
   const [input, setinput] = useState("");
   const navigate = useNavigate();
 
-  function handle_click() {
+  function handle_click(e) {
     if (input !== "") {
       const value = makecapital(input);
       const search = filter(data, value);
       setinput("");
       setshow(false);
       navigate(`/hotels/${value}`);
+      e.stopPropagation();
     }
   }
 

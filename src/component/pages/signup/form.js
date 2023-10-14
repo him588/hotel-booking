@@ -59,6 +59,7 @@ function Form() {
         name: input[0].value,
         email: input[1].value,
         password: input[2].value,
+        wishlist: [],
       };
       user = [...user, signup];
       localStorage.setItem("user", JSON.stringify(user));
@@ -125,6 +126,15 @@ function Form() {
         >
           Sign up
         </button>
+        <p className="text-[16px] font-medium text-center">
+          Already have account go to{" "}
+          <span
+            className="text-[#1c5d1c] text-[18px] cursor-pointer underline-offset-3 underline"
+            onClick={() => navigate("/login")}
+          >
+            Login.
+          </span>
+        </p>
       </div>
     </div>
   );
