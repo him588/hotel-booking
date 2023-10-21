@@ -1,13 +1,17 @@
+import { useEffect, useState } from "react"
+
 function useLocalstorage() {
-  const alluser = [];
-  const user = JSON.parse(localStorage.getItem("user"));
+	const [users, setUsers] = useState([])
 
-  if (user !== null) {
-    for (let i = 0; i < user.length; i++) {
-      alluser.push(user[i].email);
-    }
-  }
+	useEffect(() => {
+		const user = JSON.parse(localStorage.getItem("user"))
+		if (user !== null) {
+			for (let i = 0; i < user.length; i++) {
+				setUsers((prev) => [...prev, user[i].email])
+			}
+		}
+	}, [])
 
-  return alluser;
+	return users
 }
-export default useLocalstorage;
+export default useLocalstorage

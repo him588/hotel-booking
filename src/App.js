@@ -10,7 +10,7 @@ import {
   Signup,
   Success,
   Wishlist,
-} from "./component/pages/index";
+} from "./component/pages";
 import { detailscontext } from "./component/context";
 import { useState } from "react";
 
@@ -24,14 +24,14 @@ function App() {
       <detailscontext.Provider value={{ detail, setdetail }}>
         <div className="w-full">
           <Routes>
-            <Route path="/" element={<Home></Home>} />
-            <Route path="/login" element={<Login></Login>} />
-            <Route path="/Signup" element={<Signup></Signup>} />
-            <Route path="/hotels" element={<Listing></Listing>} />
-            <Route path="/hotels/:location" element={<Fillter></Fillter>} />
-            <Route path="/hotel/:name" element={<Deatils></Deatils>} />
-            <Route path="/success" element={<Success></Success>} />
-            <Route path="/wishlist" element={<Wishlist></Wishlist>} />
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/Signup" element={<Signup />} />
+            <Route path="/hotels" element={<Listing />} />
+            <Route path="/hotels/:location" element={<Fillter />} />
+            <Route path="/hotel/:name" element={<Deatils />} />
+            <Route path="/success" element={<Success />} />
+            <Route path="/wishlist" element={<Wishlist />} />
           </Routes>
         </div>
       </detailscontext.Provider>
