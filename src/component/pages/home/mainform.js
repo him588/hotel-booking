@@ -3,12 +3,14 @@ import { Dropdown } from "../../core";
 import { useNavigate } from "react-router-dom";
 
 function Mainform() {
-  const loginstatus = localStorage.getItem("loginstatus");
+  const currentuser = localStorage.getItem("currentuser");
+  // console.log(loginstatus)
+  // localStorage.clear();
 
-  console.log(loginstatus);
+  console.log(currentuser);
   const navigate = useNavigate();
   function handlesubmit() {
-    if (loginstatus === "true") {
+    if (currentuser !== null) {
       navigate("/hotels");
     } else {
       navigate("/login");

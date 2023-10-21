@@ -84,18 +84,14 @@ function Filter({ items, setfilitem }) {
               className="h-[45px] text-[18px] font-medium w-[50%] border-[1px] px-2 border-solid border-[grey] rounded-md outline-none"
               placeholder="min-price"
               value={minvalue}
-              onChange={(e) => {
-                change(e, setminvalue);
-              }}
+              onChange={(e) => change(e, setminvalue)}
             />
             <input
               type="text"
               className="h-[45px] text-[18px] font-medium w-[50%] border-[1px] px-2 border-solid border-[grey] rounded-md outline-none"
               placeholder="max-price"
               value={maxvalue}
-              onChange={(e) => {
-                change(e, setmaxvalue);
-              }}
+              onChange={(e) => change(e, setmaxvalue)}
             />
           </div>
         </div>
@@ -104,18 +100,14 @@ function Filter({ items, setfilitem }) {
           <div className="flex gap-[20px] items-center">
             <button
               ref={count1}
-              onClick={(e) => {
-                set_sleep(e, count1, count2, count3);
-              }}
+              onClick={(e) => set_sleep(e, count1, count2, count3)}
               className="h-[40px] flex justify-center text-[25px] text-[black] bg-white font-medium w-[80px] border-[1px]  border-solid border-[grey] rounded-md outline-none"
             >
               2
             </button>
             <button
               ref={count2}
-              onClick={(e) => {
-                set_sleep(e, count2, count3, count1);
-              }}
+              onClick={(e) => set_sleep(e, count2, count3, count1)}
               className="h-[40px] flex justify-center text-[25px] bg-white text-[black] font-medium w-[80px] border-[1px]  border-solid border-[grey] rounded-md outline-none"
             >
               4

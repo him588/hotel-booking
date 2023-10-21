@@ -9,6 +9,7 @@ import {
   Login,
   Signup,
   Success,
+  Wishlist,
 } from "./component/pages/index";
 import { detailscontext } from "./component/context";
 import { useState } from "react";
@@ -16,6 +17,8 @@ import { useState } from "react";
 function App() {
   localStorage.setItem("data", JSON.stringify(data));
   const [detail, setdetail] = useState("");
+  // const [current_user, set_currentuser] = useState("");
+
   return (
     <BrowserRouter>
       <detailscontext.Provider value={{ detail, setdetail }}>
@@ -28,6 +31,7 @@ function App() {
             <Route path="/hotels/:location" element={<Fillter></Fillter>} />
             <Route path="/hotel/:name" element={<Deatils></Deatils>} />
             <Route path="/success" element={<Success></Success>} />
+            <Route path="/wishlist" element={<Wishlist></Wishlist>} />
           </Routes>
         </div>
       </detailscontext.Provider>

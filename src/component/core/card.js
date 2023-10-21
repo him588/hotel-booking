@@ -4,45 +4,20 @@ import { Star, Wish } from "../icon";
 import Slider from "./imageslider";
 import { detailscontext } from "../context";
 import { useNavigate } from "react-router-dom";
+import additem from "../helper/additem";
 
 function Card({ details }) {
-  // localStorage.clear();
-  const current_user = localStorage.getItem("currentuser"); // CURRENT USER EMAIL WHICH WE SET IN AT TIME OF LOGIN//
-
   const detail = useContext(detailscontext);
   const navigate = useNavigate();
-
   function handleclick() {
     detail.setdetail(details);
     navigate(`/hotel/${details.hotelname}`);
   }
   function handle_add(e) {
     e.stopPropagation();
-    const users = JSON.parse(localStorage.getItem("user")); //THIS IS OUR ALL USER THAT'S IN LOCALSTORAGE//
-
-    const user_details = users.find((person) => {
-      if (person.email === current_user) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-    const index = users.findIndex((user) => user.email === user_details.email); // WE USE INDEX FOR SPLICE NEW USER DETAILS//
-
-    const is_containes = user_details.wishlist.some(
-      (item) => item.hotelid === details.hotelid
-    );
-
-    // HERE WE DO OUR MAIN WORK TO UPDATE OUR AND RESET IN LOCALSTORAGE //
-    if (is_containes) {
-      alert("Item already in your wishlist");
-    } else {
-      user_details.wishlist.push(details);
-      console.log(user_details);
-
-      users.splice(index, 1, user_details);
-      localStorage.setItem("user", JSON.stringify(users));
-    }
+    const users = JSON.parse(localStorage.getItem("user"));
+    const current_user = JSON.parse(localStorage.getItem("currentuser"));
+    additem(users, current_user, details);
   }
 
   return (
@@ -56,7 +31,7 @@ function Card({ details }) {
           onClick={handle_add}
           className="h-[40px] w-[40px] bg-[#535353]/50 absolute z-40 flex items-center justify-center top-1 right-1 rounded-full"
         >
-          <Wish h={20} w={20}></Wish>
+          <Wish h={20} w={20} c={"#ffffff"}></Wish>
         </div>
       </div>
       <div className="flex justify-between items-center mt-1">

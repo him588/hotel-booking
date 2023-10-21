@@ -14,6 +14,7 @@ import Menu from "./menu";
 import Star from "./star";
 import Wish from "./love";
 import Filtericon from "./filtericon";
+import Logout from "./logout";
 export {
   Down,
   Amenicon,
@@ -31,4 +32,5 @@ export {
   Star,
   Wish,
   Filtericon,
+  Logout,
 };

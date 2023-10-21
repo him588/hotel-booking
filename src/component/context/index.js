@@ -1,2 +1,3 @@
 import detailscontext from "./detailscontext";
-export { detailscontext };
+import currentusercontext from "./currentusercontext";
+export { detailscontext, currentusercontext };

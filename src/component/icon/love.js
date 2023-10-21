@@ -1,12 +1,12 @@
-function Wish({ h, w }) {
+function Wish({ h, w, c }) {
   return (
     <svg
-      fill="#ffffff"
+      fill={c}
       width={w}
       height={h}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      stroke="#ffffff"
+      stroke={c}
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g

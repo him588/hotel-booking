@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Input } from "../../core";
 import { useNavigate } from "react-router-dom";
+import { useLocalstorage, useSetuser } from "../../custom";
 
 function Form() {
   const [email, setemail] = useState("");
@@ -8,27 +9,24 @@ function Form() {
   const [error1, seterror1] = useState(false);
   const [error2, seterror2] = useState(false);
   const navigate = useNavigate();
-  const all_user = [];
+  const all_user = useLocalstorage();
   const user = JSON.parse(localStorage.getItem("user"));
-  if (user !== null) {
-    for (let i = 0; i < user.length; i++) {
-      all_user.push(user[i].email);
-    }
-  }
+  const index = all_user.indexOf(email);
+
+  const setuser = useSetuser;
+
   function handlecheck() {
-    if (all_user.includes(email)) {
+    if (!all_user.includes(email)) {
+      seterror1(true);
+    } else {
       seterror1(false);
-      const index = all_user.indexOf(email);
       if (email === user[index].email && password === user[index].password) {
-        localStorage.setItem("loginstatus", true);
         seterror2(false);
-        localStorage.setItem("currentuser", email);
         navigate("/hotels");
+        setuser(email, user);
       } else {
         seterror2(true);
       }
-    } else {
-      seterror1(true);
     }
   }
 

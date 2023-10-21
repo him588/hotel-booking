@@ -11,7 +11,7 @@ function Searchbar({ show, setshow }) {
   function handle_click(e) {
     if (input !== "") {
       const value = makecapital(input);
-      const search = filter(data, value);
+      // const search = filter(data, value);
       setinput("");
       setshow(false);
       navigate(`/hotels/${value}`);

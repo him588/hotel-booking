@@ -7,7 +7,7 @@ import Form from "./form";
 
 function Deatils() {
   const details = useContext(detailscontext);
-  console.log(details.detail);
+
   return (
     <div className="w-full h-auto bg-[#f9f9ff] font-[Raleway] p-[20px]">
       <img src={img} alt="" className="h-[110px] w-[110px]" />
