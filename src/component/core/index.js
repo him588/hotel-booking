@@ -8,6 +8,7 @@ import Slider from "./imageslider";
 import Searchbar from "./searchbar";
 import Filter from "../pages/fillter.js/filter";
 import Fotter from "./Footer";
+import HelperText from "./datepicker";
 
 export {
   Dropdown,
@@ -19,4 +20,5 @@ export {
   Searchbar,
   Filter,
   Fotter,
+  HelperText,
 };

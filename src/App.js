@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import data from "./component/data/data";
+
 import {
   Deatils,
   Fillter,

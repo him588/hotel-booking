@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Searchicon } from "../icon";
-import data from "../data/data";
-import { filter, makecapital } from "../helper/filter";
+import { makecapital } from "../helper/filter";
 import { useNavigate } from "react-router-dom";
 
-function Searchbar({ show, setshow }) {
+function Searchbar({ show, setshow, place }) {
   const [input, setinput] = useState("");
   const navigate = useNavigate();
 
@@ -12,6 +11,8 @@ function Searchbar({ show, setshow }) {
     if (input !== "") {
       const value = makecapital(input);
       // const search = filter(data, value);
+      place(value);
+
       setinput("");
       setshow(false);
       navigate(`/hotels/${value}`);

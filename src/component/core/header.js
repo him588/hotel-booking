@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 function Header() {
   const [show, setshow] = useState(false);
   const [hide, sethide] = useState(false);
+  const [place, setplace] = useState("Anywhere");
   const weight = window.innerWidth;
   const navigate = useNavigate();
 
@@ -21,7 +22,8 @@ function Header() {
       <img
         src={img}
         alt=""
-        className="h-[100px] w-[100px] max-[400px]:hidden"
+        className="h-[100px] cursor-pointer w-[100px] max-[400px]:hidden"
+        onClick={() => navigate("/hotels")}
       />
 
       {show ? (
@@ -47,7 +49,7 @@ function Header() {
         } `}
       >
         <p className="text-[16px] font-semibold cursor-pointer max-[]: ">
-          Anywhere
+          {place}
         </p>
         <div className="h-[70%] w-[.5px] bg-[#a7a7a7]"></div>
         <p className="text-[16px] font-semibold cursor-pointer ">Select Date</p>
@@ -70,7 +72,7 @@ function Header() {
         <Profile h={weight > 400 ? 28 : 0} w={weight > 400 ? 28 : 0}></Profile>
         <div
           className={`  w-[130px] bg-[#f9f9ff] absolute right-[0px] top-[50px] z-50 rounded-2xl px-[10px] py-[15px] ${
-            hide ? "  invisible" : " block"
+            hide ? " block" : " invisible"
           } `}
           onClick={(e) => e.stopPropagation()}
         >
@@ -91,7 +93,7 @@ function Header() {
         </div>
       </div>
 
-      <Searchbar show={show} setshow={setshow}></Searchbar>
+      <Searchbar show={show} setshow={setshow} place={setplace}></Searchbar>
     </div>
   );
 }
